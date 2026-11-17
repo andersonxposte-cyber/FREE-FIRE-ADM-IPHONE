@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090b18"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="FREE FIRE ADM">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+<title>FREE FIRE ADM ORGANIZER</title>
+</head>
+<body>
+<header><div><small>PAINEL DE ADMINISTRAÇÃO</small><h1>FREE FIRE <span>ADM</span></h1></div><button id="settings" aria-label="Definições">⚙</button></header>
+<main>
+<section id="home" class="page active">
+<div class="hero"><small>PAINEL PRINCIPAL</small><h2>Bem-vindo, ADM!</h2><p>Organiza apostas e campeonatos num só lugar.</p></div>
+<div class="stats"><article><small>Saldo registado</small><strong id="balance">0 MT</strong></article><article><small>Apostas</small><strong id="betCount">0</strong></article><article><small>Campeonatos</small><strong id="tourCount">0</strong></article><article><small>Notas</small><strong id="noteCount">0</strong></article></div>
+<div class="panel"><h3>Acesso rápido</h3><div class="quick"><button data-go="bets">＋ Nova aposta</button><button data-go="tournaments">＋ Campeonato</button><button data-go="notes">＋ Nota</button></div></div>
+</section>
+<section id="bets" class="page"><h2>Apostas</h2><div class="panel"><label>Jogador<input id="player" placeholder="Nick do jogador"></label><label>Valor (MT)<input id="amount" type="number" min="5" max="100000" placeholder="Ex.: 25"></label><label>Modo<select id="mode"><option>X1</option><option>X2</option><option>X3</option><option>X4</option></select></label><button id="addBet" class="primary">Registar aposta</button></div><div class="panel"><h3>Histórico</h3><div id="betList" class="items"></div></div></section>
+<section id="tournaments" class="page"><h2>Campeonatos</h2><div class="panel"><label>Nome do campeonato<input id="tourName" placeholder="Ex.: Torneio de sexta"></label><label>Tipo<select id="tourType"><option>Contra Squad</option><option>Mapa aberto</option></select></label><label>Taxa de inscrição (MT)<input id="tourFee" type="number" min="0" placeholder="0"></label><button id="addTour" class="primary">Criar campeonato</button></div><div id="tourList" class="items"></div></section>
+<section id="notes" class="page"><h2>Inventário / Notas</h2><div class="panel"><label>Título<input id="noteTitle" placeholder="Título"></label><label>Descrição<textarea id="noteBody" placeholder="Escreve aqui..."></textarea></label><button id="addNote" class="primary">Guardar nota</button></div><div id="noteList" class="items"></div></section>
+<section id="account" class="page"><h2>Conta</h2><div class="panel"><label>Movimento (MT)<input id="movement" type="number" placeholder="Valor"></label><div class="quick"><button id="addMoney">Adicionar saldo</button><button id="takeMoney">Retirar saldo</button></div><p class="muted">Registos guardados neste dispositivo.</p></div></section>
+</main>
+<nav><button data-go="home" class="selected">⌂<small>Início</small></button><button data-go="bets">◈<small>Apostas</small></button><button data-go="tournaments">🏆<small>Campeonatos</small></button><button data-go="notes">▤<small>Inventário</small></button><button data-go="account">◉<small>Conta</small></button></nav>
+<footer>Ánderson (jj)</footer>
+<script src="app.js"></script>
+</body></html>
